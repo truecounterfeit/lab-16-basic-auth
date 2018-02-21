@@ -10,9 +10,9 @@ require("dotenv").config();
 
 describe('Testing for routes', () => {
 it('403: Forbidden; routes that have not been registered', (done) => {
-  // request.post('localhost:3000/user.js').end(function(err, res) {
-  //   expect(res.text).toEqual('Note not found');
-  //   done();
+  request.post('localhost:3000/user.js').end(function(err, res) {
+    expect(res.text).toEqual('Note not found');
+    done();
   });
 });
 
